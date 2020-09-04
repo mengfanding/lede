@@ -8,6 +8,9 @@
 name: mt7620
 
 on:
+  push:
+    branches: 
+      - master
   schedule:
     - cron: 30 20 * * *
   release:
