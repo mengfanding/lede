@@ -111,3 +111,5 @@ jobs:
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
           file_glob: true
+      - name: 通知
+        run: curl "https://sc.ftqq.com/SCU57843T2ff932ee139ac5d34c0e18bd1836b7945d5ab38719b19.send?text=x86"
