@@ -1,0 +1,19 @@
+mwan        负载均衡
+netdata     实时监控
+smartdns
+frp
+uhttpd
+dnsforwarder
+mwan3helper
+usb_printer
+hd_idle     硬盘休眠
+cifsd       网络共享
+samba       网络共享
+vsftpd      ftp服务
+aria2
+qBittorrent
+baidupcs-web
+syncdial        多线多拨
+adbyby
+npc
+docker
