@@ -84,11 +84,13 @@ jobs:
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
 
+
       - name: Make download
         run: |
           make download -j8
           find dl -size -1024c -exec rm -f {} \;
-
+      - name: 通知
+        run: curl "https://sc.ftqq.com/SCU57843T2ff932ee139ac5d34c0e18bd1836b7945d5ab38719b19.send?text=G-DOCK-download"
       - name: Compile firmware
         run: |
           make -j$(nproc) || make -j1 V=s
