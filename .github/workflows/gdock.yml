@@ -57,9 +57,8 @@ jobs:
         run: |
           rm -f ./.config*
           pwd
-          ls
-          cp -f gdock.config ./lede/.config
-          cd lede
+          ls -ll
+          cp -f gdock.config .config
           make defconfig
 
 
