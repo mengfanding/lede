@@ -56,32 +56,8 @@ jobs:
       - name: Generate configuration file
         run: |
           rm -f ./.config*
-          touch ./.config
-          
-          # CONFIG_TARGET_ipq40xx=y
-          # CONFIG_TARGET_ipq40xx_DEVICE_p2w_r619ac-128m=y
-          
-          cat >> .config <<EOF
-          CONFIG_TARGET_ipq40xx=y
-          CONFIG_TARGET_ipq40xx_DEVICE_p2w_r619ac-128m=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-          CONFIG_PACKAGE_luci-app-openvpn-server=y
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_PACKAGE_npc=y
-          CONFIG_PACKAGE_curl=y
-          EOF
-          
-          # CONFIG_PACKAGE_v2ray-plugin=y
-          # CONFIG_PACKAGE_npc=y
-          
-          sed -i 's/^[ \t]*//g' ./.config
+          cp -f gdock.config ./lede/.config
+          cd lede
           make defconfig
 
 
