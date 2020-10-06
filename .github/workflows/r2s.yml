@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: GDOCK
+name: R2S
 
 on:
   push:
@@ -58,7 +58,7 @@ jobs:
           rm -f ./.config*
           pwd
           ls -ll
-          cp -f gdock.config .config
+          cp -f r2s.config .config
           make defconfig
 
 
@@ -118,4 +118,4 @@ jobs:
           tag: ${{ github.ref }}
           file_glob: true
       - name: 通知
-        run: curl "https://sc.ftqq.com/SCU57843T2ff932ee139ac5d34c0e18bd1836b7945d5ab38719b19.send?text=GDOCK"
+        run: curl "https://sc.ftqq.com/SCU57843T2ff932ee139ac5d34c0e18bd1836b7945d5ab38719b19.send?text=R2S"
