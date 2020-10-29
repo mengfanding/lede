@@ -74,6 +74,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
           CONFIG_PACKAGE_npc=y
           CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_smartdns=y
           EOF
           
           # CONFIG_PACKAGE_v2ray-plugin=y
