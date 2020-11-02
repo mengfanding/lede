@@ -8,11 +8,11 @@
 name: x86
 
 on:
-  # push:
-  #   branches: 
-  #     - master
-  # schedule:
-  #   - cron: 30 20 * * *
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: 30 20 * * *
   release:
     types: [published]
 
