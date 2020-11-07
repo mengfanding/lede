@@ -8,9 +8,9 @@
 name: R2S
 
 on:
-  push:
-    branches: 
-      - master
+  # push:
+  #   branches: 
+  #     - master
   # schedule:
   #   - cron: 30 19 * * *
   release:
