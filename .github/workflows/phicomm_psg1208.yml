@@ -56,22 +56,7 @@ jobs:
       - name: Generate configuration file
         run: |
           rm -f ./.config*
-          touch ./.config
-          
-          cat >> .config <<EOF
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7620=y
-          CONFIG_TARGET_ramips_mt7620_DEVICE_phicomm_psg1208=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          EOF
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-          
-          sed -i 's/^[ \t]*//g' ./.config
+          cp -f psg1208.config .config
           make defconfig
 
       - name: Make download
